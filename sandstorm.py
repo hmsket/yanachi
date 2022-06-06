@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from vector import Vector
+from vector import Vector2D
 
 def generate_sand(N=256):
     cells = np.random.randint(0,256,(N,N))
@@ -20,11 +20,11 @@ def plot_cells(cells):
 
 def main():
     cells = generate_sand()
-    startPos = Vector(20,60) # 長方形の左上の座標
-    length = Vector(30,100) # 長方形の長さ
+    startPos = Vector2D(20,60) # 長方形の左上の座標
+    length = Vector2D(30,100) # 長方形の長さ
     cells = draw_rec(cells, startPos, length)
-    startPos = Vector(55,135)
-    length = Vector(100,30)
+    startPos = Vector2D(55,135)
+    length = Vector2D(100,30)
     cells = draw_rec(cells, startPos, length)
     plot_cells(cells)
 
